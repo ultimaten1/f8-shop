@@ -513,6 +513,16 @@
     margin: 0 8px;
 }
 
+.header__mobile-search {
+    padding: 0 12px;
+}
+
+.header__mobile-search-icon {
+    font-size: 2.6rem;
+    color: var(--white-color);
+    padding: 0 12px;
+}
+
 .header__logo {
     width: 200px;
     cursor: pointer;
@@ -526,6 +536,8 @@
 .header__logo-link {
     color: transparent;
     text-decoration: none;
+    display: block;
+    line-height: 0;
 }
 
 .header__search {
@@ -535,6 +547,10 @@
     border-radius: 2px;
     display: flex;
     align-items: center;
+}
+
+.header__search-checkbox:checked ~ .header__search {
+    display: flex;
 }
 
 .header__cart {
@@ -584,9 +600,8 @@
 .header__cart-list-item {
     padding-left: 0;
     list-style: none;
-    height: 56vh;
     overflow-y: auto;
-    max-height: 44vh;
+    max-height: 26vh;
 }
 
 .header__cart-item {
@@ -656,7 +671,7 @@
 .header__cart-item-body {
     display: flex;
     justify-content: space-between;
-    margin-top: 13px; 
+    margin-top: 13px;
     /* tự thêm vào */
 }
 
@@ -675,6 +690,10 @@
 .header__cart-item-remove:hover {
     cursor: pointer;
     color: var(--primary-color);
+}
+
+.header__cart-item-trash {
+    visibility: hidden;
 }
 
 .header__cart-view-cart {
@@ -876,7 +895,7 @@
     box-shadow: 0 1px 5px rgb(190, 190, 190);
     display: none;
     overflow: hidden;
-    z-index: 1;
+    z-index: 2;
 }
 
 .header__search-history-heading {
@@ -914,6 +933,67 @@
     line-height: 38px;
 }
 
+/* Header sort bar (Mobile) */
+.header__sort-bar {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    height: var(--header-sort-bar-height);
+    background-color: var(--white-color);
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    display: none;
+}
+
+.header__sort-item {
+    flex: 1;
+}
+
+.header__sort-item__price {
+    text-align: center;
+}
+
+.header__sort-item-angle {
+    text-align: center;
+    margin: -30px 0 0 40px;
+}
+
+.header__sort-item-angles {
+    font-size: 1.2rem;
+}
+
+.header__sort-link {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    height: 100%;
+    line-height: var(--header-sort-bar-height);
+    text-align: center;
+}
+
+.header__sort-link::before {
+    content: "";
+    position: absolute;
+    top: 50%; /* chứa nó */
+    left: 0;
+    height: 60%;
+    border-left: 1px solid #e5e5e5;
+    transform: translateY(-50%); /* chính nó */
+}
+
+.header__sort-item--activated .header__sort-link {
+    color: var(--primary-color);
+}
+
+.header__sort-item:first-child .header__sort-link::before {
+    display: none;
+}
 /* App container */
 .app__container {
     background-color: #f5f5f5;
