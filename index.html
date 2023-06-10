@@ -11,15 +11,17 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="./assets/css/base.css">
+        <link rel="stylesheet" href="./assets/css/grid.css">
         <link rel="stylesheet" href="./assets/css/main.css">
+        <link rel="stylesheet" href="./assets/css/responsive.css">
         <link rel="stylesheet" href="./assets/fonts/fontawesome-free-6.3.0-web/css/all.min.css">
     </head>
     <body>
         <!-- BEM -->
         <div class="app">
             <header class="header">
-                <div class="grid">
-                    <nav class="header__navbar">
+                <div class="grid wide">
+                    <nav class="header__navbar hide-on-mobile-tablet">
                         <ul class="header__navbar-list">
                             <li class="header__navbar-item header__navbar-item--has-qr header__navbar-item--separate">
                                 Vào cửa hàng trên ứng dụng F8-Shop
@@ -137,7 +139,10 @@
                     </nav>
                     <!-- Header with search -->
                     <div class="header-with-search">
-                        <div class="header__logo">
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fa-solid fa-magnifying-glass"></i>
+                        </label>
+                        <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <svg class="header__logo-img" viewBox="0 0 192 65">
                                     <g fill-rule="evenodd">
@@ -148,6 +153,9 @@
                                 </svg>
                             </a>
                         </div>
+
+                        <input type="checkbox" hidden id="mobile-search-checkbox" class="header__search-checkbox">
+
                         <div class="header__search">
                             <div class="header__search-input-wrap">
                                 <input type="text" class="header__search-input" placeholder="Nhập để tìm kiếm sản phẩm">
@@ -217,6 +225,54 @@
                                                         Phân loại hàng: Bạc
                                                     </span>
                                                     <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>                                   
+                                                </div>
+                                                
+                                            </div>
+                                        </li>
+                                        <li class="header__cart-item">
+                                            <img src="https://www.ohuivietnam.vn/image/cache/catalog/san-pham/SUM37/khuyen-mai-sua-rua-mat-sum-losec-200x200.jpg" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">2.000.000đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-quantity">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại hàng: Bạc
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="header__cart-item">
+                                            <img src="https://www.ohuivietnam.vn/image/cache/catalog/san-pham/SUM37/khuyen-mai-sua-rua-mat-sum-losec-200x200.jpg" alt="" class="header__cart-img">
+                                            <div class="header__cart-item-info">
+                                                <div class="header__cart-item-head">
+                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                    <div class="header__cart-item-price-wrap">
+                                                        <span class="header__cart-item-price">2.000.000 đ</span>
+                                                        <span class="header__cart-item-multiply">x</span>
+                                                        <span class="header__cart-item-quantity">2</span>
+                                                    </div>
+                                                </div>
+                                                <div class="header__cart-item-body">
+                                                    <span class="header__cart-item-description">
+                                                        Phân loại hàng: Bạc
+                                                    </span>
+                                                    <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
                                                 </div>
                                             </div>
                                         </li>
@@ -236,6 +292,9 @@
                                                         Phân loại hàng: Bạc
                                                     </span>
                                                     <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
                                                 </div>
                                             </div>
                                         </li>
@@ -255,6 +314,9 @@
                                                         Phân loại hàng: Bạc
                                                     </span>
                                                     <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
                                                 </div>
                                             </div>
                                         </li>
@@ -274,6 +336,9 @@
                                                         Phân loại hàng: Bạc
                                                     </span>
                                                     <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
                                                 </div>
                                             </div>
                                         </li>
@@ -293,6 +358,9 @@
                                                         Phân loại hàng: Bạc
                                                     </span>
                                                     <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
                                                 </div>
                                             </div>
                                         </li>
@@ -312,6 +380,9 @@
                                                         Phân loại hàng: Bạc
                                                     </span>
                                                     <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
                                                 </div>
                                             </div>
                                         </li>
@@ -331,44 +402,9 @@
                                                         Phân loại hàng: Bạc
                                                     </span>
                                                     <span class="header__cart-item-remove">Xoá</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://www.ohuivietnam.vn/image/cache/catalog/san-pham/SUM37/khuyen-mai-sua-rua-mat-sum-losec-200x200.jpg" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-quantity">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại hàng: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xoá</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                        <li class="header__cart-item">
-                                            <img src="https://www.ohuivietnam.vn/image/cache/catalog/san-pham/SUM37/khuyen-mai-sua-rua-mat-sum-losec-200x200.jpg" alt="" class="header__cart-img">
-                                            <div class="header__cart-item-info">
-                                                <div class="header__cart-item-head">
-                                                    <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
-                                                    <div class="header__cart-item-price-wrap">
-                                                        <span class="header__cart-item-price">2.000.000đ</span>
-                                                        <span class="header__cart-item-multiply">x</span>
-                                                        <span class="header__cart-item-quantity">2</span>
-                                                    </div>
-                                                </div>
-                                                <div class="header__cart-item-body">
-                                                    <span class="header__cart-item-description">
-                                                        Phân loại hàng: Bạc
-                                                    </span>
-                                                    <span class="header__cart-item-remove">Xoá</span>
+                                                    <div>
+                                                        <i class="fa-solid fa-trash header__cart-item-body-trash"></i>
+                                                    </div>      
                                                 </div>
                                             </div>
                                         </li>
@@ -380,11 +416,28 @@
                         </div>
                     </div>
                 </div>
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Liên quan</a>
+                    </li>
+                    <li class="header__sort-item header__sort-item--activated">
+                        <a href="" class="header__sort-link">Mới nhất</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Bán chạy</a>
+                    </li>
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-link">Giá</a>
+                        <div class="header__sort-item-angle">
+                            <i class="fa-solid fa-angles-down header__sort-item-angles"></i>
+                        </div>
+                    </li>
+                </ul>
             </header>
             
             <div class="app__container"> 
                 <!-- Grid -> Row -> Column -->
-                <div class="grid">
+                <div class="grid wide">
                     <div class="grid__row app__content">
                         <div class="grid__column-2">
                             <nav class="category">
@@ -409,7 +462,7 @@
                         </div>
     
                         <div class="grid__column-10">
-                            <div class="home-filter">
+                            <div class="home-filter hide-on-mobile-tablet">
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="home-filter__btn btn">Phổ biến</button>
                                 <button class="home-filter__btn btn btn--primary">Mới nhất</button>
@@ -450,7 +503,7 @@
                                     <!-- Product item -->
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -486,7 +539,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -522,7 +575,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -558,7 +611,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -594,7 +647,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -630,7 +683,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -666,7 +719,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -702,7 +755,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -738,7 +791,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -774,7 +827,7 @@
                                     </div>
                                     <div class="grid__column-2-4">
                                         <a href="" class="home-product-item">
-                                            <div class="home-product-item__img" style="background-image: url(https://www.tugo.com.vn/wp-content/uploads/1591679365_l1.jpg);"></div>
+                                            <div class="home-product-item__img" style="background-image: url(https://htmediagroup.vn/wp-content/uploads/2021/07/anh-my-pham-3-min.jpg);"></div>
                                             <h4 class="home-product-item__name">Set dưỡng trắng Whoo  đông y hoàng cung  Gong Jinh Yang Seol Radiant</h4>
                                             <div class="home-product-item__price">
                                                 <span class="home-product-item__price-old">1.290.000đ</span>
@@ -808,6 +861,7 @@
                                             </div>
                                         </a>
                                     </div>
+                                    
                                 </div>
                             </div>
 
@@ -850,7 +904,7 @@
             </div>
 
             <footer class="footer">
-                <div class="grid">
+                <div class="grid wide">
                     <div class="grid__row">
                         <div class="grid__column-2-4">
                             <h3 class="footer__heading">Chăm sóc khách hàng</h3>
@@ -935,7 +989,7 @@
                 </div>
 
                 <div class="footer__bottom">
-                    <div class="grid">
+                    <div class="grid wide">
                         <p class="footer__text">© 2022 - Bản quyền thuộc về Trần Thành Đạt</p>
                     </div>
                 </div>
